@@ -1,12 +1,21 @@
-# import dash
-from jupyter_dash import JupyterDash
+import dash
+# from jupyter_dash import JupyterDash
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
 import base64
 import os
 import datetime
 
-app = JupyterDash(__name__)
+app = dash.Dash(
+    __name__, 
+    external_stylesheets=[
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;900&display=swap",
+    ],
+    title="ChartGPT",
+    update_title="ChartGPT | Loading...",
+    assets_folder="assets",
+    include_assets_files=True,
+)
 
 app.layout = html.Div([
     dcc.Upload(
