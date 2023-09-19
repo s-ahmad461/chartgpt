@@ -6,4 +6,3 @@ dash>=2.11.1
 gunicorn>=21.2.0
 jupyter_dash
 openpyxl
-sqlite3
